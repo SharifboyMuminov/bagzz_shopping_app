@@ -26,37 +26,52 @@ class ProductItem extends StatelessWidget {
         ),
       ),
       onPressed: onTab,
-      child: Column(
+      child: Stack(
+        alignment: Alignment.center,
         children: [
-          Expanded(
-            child: Image.asset(
-              productModel.imagePath,
-            ),
+          Column(
+            children: [
+              Expanded(
+                child: Image.asset(
+                  productModel.imagePath,
+                ),
+              ),
+              11.getH(),
+              Text(
+                productModel.title,
+                style: AppTextStyle.playfairDisplaySemiBold.copyWith(
+                  fontSize: 18.sp,
+                  color: AppColors.black,
+                ),
+              ),
+              18.getH(),
+              Text(
+                "Shop now",
+                style: AppTextStyle.workSansMedium.copyWith(
+                  fontSize: 14.sp,
+                  color: AppColors.black,
+                ),
+              ),
+              4.getH(),
+              Card(
+                color: AppColors.black,
+                child: SizedBox(
+                  width: 88.we,
+                  height: 2.he,
+                ),
+              ),
+            ],
           ),
-          11.getH(),
-          Text(
-            productModel.title,
-            style: AppTextStyle.playfairDisplaySemiBold.copyWith(
-              fontSize: 18.sp,
-              color: AppColors.black,
+          Align(
+            alignment: Alignment.topRight,
+            child: IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.favorite_border,
+                size: 22.sp,
+              ),
             ),
-          ),
-          18.getH(),
-          Text(
-            "Shop now",
-            style: AppTextStyle.workSansMedium.copyWith(
-              fontSize: 14.sp,
-              color: AppColors.black,
-            ),
-          ),
-          4.getH(),
-          Card(
-            color: AppColors.black,
-            child: SizedBox(
-              width: 88.we,
-              height: 2.he,
-            ),
-          ),
+          )
         ],
       ),
     );
