@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 left: 12.we,
                 right: 12.we,
                 top: 10.he,
-                bottom: 40.he,
+                bottom: 70.he,
               ),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
