@@ -1,4 +1,5 @@
 import 'package:bagzz_shopping/data/local/local_varibals.dart';
+import 'package:bagzz_shopping/screens/details/details_screen.dart';
 import 'package:bagzz_shopping/screens/home/widget/my_page_view.dart';
 import 'package:bagzz_shopping/screens/home/widget/product_item.dart';
 import 'package:bagzz_shopping/utils/app_size.dart';
@@ -59,7 +60,16 @@ class _HomeScreenState extends State<HomeScreen> {
               itemCount: products.length,
               itemBuilder: (context, index) {
                 return ProductItem(
-                  onTab: () {},
+                  onTab: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return DetailsScreen(productModel: products[index]);
+                        },
+                      ),
+                    );
+                  },
                   productModel: products[index],
                 );
               },
