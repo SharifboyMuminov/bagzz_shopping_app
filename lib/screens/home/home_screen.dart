@@ -1,4 +1,7 @@
+import 'package:bagzz_shopping/data/local/local_varibals.dart';
 import 'package:bagzz_shopping/screens/home/widget/my_page_view.dart';
+import 'package:bagzz_shopping/screens/home/widget/product_item.dart';
+import 'package:bagzz_shopping/utils/app_colors.dart';
 import 'package:bagzz_shopping/utils/app_size.dart';
 import 'package:bagzz_shopping/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
@@ -40,6 +43,29 @@ class _HomeScreenState extends State<HomeScreen> {
           20.getH(),
           const MyPageView(),
           20.getH(),
+          Expanded(
+            child: GridView.builder(
+              padding: EdgeInsets.only(
+                left: 12.we,
+                right: 12.we,
+                top: 10.he,
+                bottom: 40.he,
+              ),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 24.he,
+                crossAxisSpacing: 13.we,
+                childAspectRatio: 0.82,
+              ),
+              itemCount: products.length,
+              itemBuilder: (context, index) {
+                return ProductItem(
+                  onTab: () {},
+                  productModel: products[index],
+                );
+              },
+            ),
+          ),
         ],
       ),
     );
