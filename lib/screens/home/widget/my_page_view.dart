@@ -12,10 +12,10 @@ class MyPageView extends StatefulWidget {
 }
 
 class _MyPageViewState extends State<MyPageView> {
-
   final PageController _pageController = PageController();
 
   int activePageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -25,6 +25,7 @@ class _MyPageViewState extends State<MyPageView> {
         children: [
           PageView(
             controller: _pageController,
+            physics: const NeverScrollableScrollPhysics(),
             children: const [
               PageViewItem(imagePath: "assets/images/img.png"),
               PageViewItem(imagePath: "assets/images/img_1.png"),
