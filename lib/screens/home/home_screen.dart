@@ -1,7 +1,6 @@
 import 'package:bagzz_shopping/data/local/local_varibals.dart';
 import 'package:bagzz_shopping/screens/home/widget/my_page_view.dart';
 import 'package:bagzz_shopping/screens/home/widget/product_item.dart';
-import 'package:bagzz_shopping/utils/app_colors.dart';
 import 'package:bagzz_shopping/utils/app_size.dart';
 import 'package:bagzz_shopping/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
