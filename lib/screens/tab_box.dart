@@ -1,8 +1,7 @@
+import 'package:bagzz_shopping/screens/dialog/basket_dialog.dart';
 import 'package:bagzz_shopping/screens/home/home_screen.dart';
 import 'package:bagzz_shopping/utils/app_colors.dart';
 import 'package:bagzz_shopping/utils/app_size.dart';
-import 'package:bagzz_shopping/utils/app_text_style.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -79,86 +78,7 @@ class _TabBoxState extends State<TabBox> {
                       ),
                       IconButton(
                         onPressed: () {
-                          showModalBottomSheet(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                topRight: Radius.circular(40.r),
-                                topLeft: Radius.circular(40.r),
-                              ),
-                            ),
-                            barrierColor: Colors.transparent,
-                            backgroundColor: AppColors.white.withOpacity(0.8),
-                            context: context,
-                            builder: (BuildContext context) {
-                              return Padding(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 22.we,
-                                  vertical: 10.he,
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    SizedBox(width: width),
-                                    DecoratedBox(
-                                      decoration: BoxDecoration(
-                                        color: AppColors.c3E3E3E,
-                                        borderRadius:
-                                            BorderRadius.circular(22.r),
-                                      ),
-                                      child: SizedBox(
-                                        width: 125.we,
-                                        height: 2.he,
-                                      ),
-                                    ),
-                                    67.getH(),
-                                    Row(
-                                      children: [
-                                        Image.asset(
-                                          "assets/images/img_3.png",
-                                          width: 81.we,
-                                          height: 81.we,
-                                        ),
-                                        13.getW(),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              "Berkely",
-                                              style: AppTextStyle
-                                                  .playfairDisplaySemiBold
-                                                  .copyWith(
-                                                fontSize: 18.sp,
-                                              ),
-                                            ),
-                                            5.getH(),
-                                            Text(
-                                              "Wallet with chain",
-                                              style: AppTextStyle
-                                                  .workSansRegular
-                                                  .copyWith(
-                                                fontSize: 14.sp,
-                                              ),
-                                            ),
-                                            Text(
-                                              "Style #36252 0YK0G 1000",
-                                              style: AppTextStyle
-                                                  .workSansRegular
-                                                  .copyWith(
-                                                fontSize: 12.sp,
-                                                color: AppColors.c848484,
-                                              ),
-                                            ),
-                                            14.getH(),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              );
-                            },
-                          );
+                          basketDialog(context);
                         },
                         icon: SvgPicture.asset(
                           "assets/icons/basket.svg",
